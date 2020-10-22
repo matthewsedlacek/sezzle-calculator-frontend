@@ -53,7 +53,6 @@ class App extends Component {
       <div>
         <div>
           <img src={logo} className="App-logo" alt="logo" />
-          <h1>Sezzle Calculator</h1>
           <div>
             <Calculator />
           </div>

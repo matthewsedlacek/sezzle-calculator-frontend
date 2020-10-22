@@ -40,27 +40,46 @@
   margin: 5px;
 }
 
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  border: thin solid gray;
+}
+
+.card-wrapper {
+  width: 33.33%;
+  display: flex;
+  background: #e0e0ff;
+}
+
 .card {
-  background-color: purple;
+  flex-grow: 1;
+  margin: 7px;
+  display: flex;
+  flex-direction: column;
+  border: thin solid gray;
+  background: #e0ffff;
+  overflow: hidden; /* NEW */
 }
 
-/* .bg-primary {
-  background-color: #007bff !important;
+.card div {
+  border: thin solid gray;
 }
 
-.bg-custom-1 {
-  background-color: rgba(0, 0, 0, 0.2);
+.card div:nth-child(1) {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; /* NEW */
 }
 
-.bg-primary {
-  background-color: rgba(0, 0, 0, 0.2) !important;
-} */
+.card div:nth-child(2) {
+  flex-grow: 2;
+}
 
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+button {
+  width: 25%;
+  height: 60px;
+  font-size: 30px;
+  /* margin: 10px; */
+  justify-content: space-around;
+}

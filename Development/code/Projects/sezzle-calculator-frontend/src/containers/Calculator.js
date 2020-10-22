@@ -53,7 +53,11 @@ class Calculator extends Component {
       <Card style={{ width: "50%" }} bg={variant.toLowerCase()}>
         <Card.Body>
           <Card.Text>
-            <CalculatorDisplay result={this.state.result} />
+            <div class="card">
+              <div>
+                <CalculatorDisplay result={this.state.result} />
+              </div>
+            </div>
           </Card.Text>
           <Card.Text>
             <Keypad onClick={this.onClick} />
