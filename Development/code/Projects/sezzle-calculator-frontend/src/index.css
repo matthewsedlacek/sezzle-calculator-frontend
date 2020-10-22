@@ -16,3 +16,7 @@ code {
   font-family: "digital-clock-font";
   src: url("https://www.1001fonts.com/digital-7-font.html");
 }
+
+.calculatorColor {
+  background-color: purple;
+}

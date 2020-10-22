@@ -49,20 +49,18 @@ class Calculator extends Component {
   };
 
   render() {
-    return (
-      <div>
-        <Card style={{ width: "50%" }}>
-          <Card.Body>
-            <Card.Text>
-              <CalculatorDisplay result={this.state.result} />
-            </Card.Text>
-            <Card.Text>
-              <Keypad onClick={this.onClick} />
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </div>
-    );
+    return ["Primary"].map((variant, idx) => (
+      <Card style={{ width: "50%" }} bg={variant.toLowerCase()}>
+        <Card.Body>
+          <Card.Text>
+            <CalculatorDisplay result={this.state.result} />
+          </Card.Text>
+          <Card.Text>
+            <Keypad onClick={this.onClick} />
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    ));
   }
 }
 
