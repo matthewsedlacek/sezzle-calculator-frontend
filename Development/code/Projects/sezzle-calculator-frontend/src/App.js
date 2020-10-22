@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-// import CalculatorDisplay from "./components/calculator/CalculatorDisplay";
-// import Keypad from "./components/calculator/Keypad";
 import logo from "./logo.svg";
 import Calculator from "./containers/Calculator";
 

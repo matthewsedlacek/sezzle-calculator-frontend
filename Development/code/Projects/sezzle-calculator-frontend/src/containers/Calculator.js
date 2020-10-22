@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import CalculatorDisplay from "../components/calculator/CalculatorDisplay";
 import Keypad from "../components/calculator/Keypad";
-import Card from "react-bootstrap/Card";
+import { Card } from "react-bootstrap/Card";
 
 class Calculator extends Component {
   state = {
