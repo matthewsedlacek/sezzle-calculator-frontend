@@ -1,176 +1,177 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
 
 const Keypad = (props) => {
   return (
     <div>
-      <button
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="light"
         name="("
         onClick={(e) => props.onClick(e.target.name)}
       >
         (
-      </button>
-      <button
+      </Button>
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="light"
         name=")"
         onClick={(e) => props.onClick(e.target.name)}
       >
         )
-      </button>
-      <button
+      </Button>
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="danger"
         name="←"
         onClick={(e) => props.onClick(e.target.name)}
       >
         ←
-      </button>
-      <button
+      </Button>
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="danger"
         name="C"
         onClick={(e) => props.onClick(e.target.name)}
       >
         C
-      </button>
+      </Button>
       <br />
 
-      <button
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="light"
         name="1"
         onClick={(e) => props.onClick(e.target.name)}
       >
         1
-      </button>
-      <button
+      </Button>
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="light"
         name="2"
         onClick={(e) => props.onClick(e.target.name)}
       >
         2
-      </button>
-      <button
+      </Button>
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="light"
         name="3"
         onClick={(e) => props.onClick(e.target.name)}
       >
         3
-      </button>
-      <button
+      </Button>
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="warning"
         name="+"
         onClick={(e) => props.onClick(e.target.name)}
       >
         +
-      </button>
+      </Button>
       <br />
 
-      <button
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="light"
         name="4"
         onClick={(e) => props.onClick(e.target.name)}
       >
         4
-      </button>
-      <button
+      </Button>
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="light"
         name="5"
         onClick={(e) => props.onClick(e.target.name)}
       >
         5
-      </button>
-      <button
+      </Button>
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="light"
         name="6"
         onClick={(e) => props.onClick(e.target.name)}
       >
         6
-      </button>
-      <button
+      </Button>
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="warning"
         name="-"
         onClick={(e) => props.onClick(e.target.name)}
       >
         -
-      </button>
+      </Button>
       <br />
 
-      <button
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="light"
         name="7"
         onClick={(e) => props.onClick(e.target.name)}
       >
         7
-      </button>
-      <button
+      </Button>
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="light"
         name="8"
         onClick={(e) => props.onClick(e.target.name)}
       >
         8
-      </button>
-      <button
+      </Button>
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="light"
         name="9"
         onClick={(e) => props.onClick(e.target.name)}
       >
         9
-      </button>
-      <button
+      </Button>
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="warning"
         name="*"
         onClick={(e) => props.onClick(e.target.name)}
       >
         x
-      </button>
+      </Button>
       <br />
 
-      <button
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="light"
         name="."
         onClick={(e) => props.onClick(e.target.name)}
       >
         .
-      </button>
-      <button
+      </Button>
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="light"
         name="0"
         onClick={(e) => props.onClick(e.target.name)}
       >
         0
-      </button>
-      <button
+      </Button>
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="danger"
         name="="
         onClick={(e) => props.onClick(e.target.name)}
       >
         =
-      </button>
-      <button
+      </Button>
+      <Button
         type="button"
-        class="btn btn-light"
+        variant="warning"
         name="/"
         onClick={(e) => props.onClick(e.target.name)}
       >
         ÷
-      </button>
+      </Button>
       <br />
     </div>
   );

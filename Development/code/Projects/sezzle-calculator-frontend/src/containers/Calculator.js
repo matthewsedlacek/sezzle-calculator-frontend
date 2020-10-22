@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import CalculatorDisplay from "../components/calculator/CalculatorDisplay";
 import Keypad from "../components/calculator/Keypad";
+import SezzleLogo from "../components/calculator/SezzleLogo";
 import Card from "react-bootstrap/Card";
 
 class Calculator extends Component {
@@ -52,6 +53,7 @@ class Calculator extends Component {
     return ["Primary"].map((variant, idx) => (
       <Card style={{ width: "50%" }} bg={variant.toLowerCase()}>
         <Card.Body>
+          <SezzleLogo />
           <Card.Text>
             <div class="card">
               <div>
