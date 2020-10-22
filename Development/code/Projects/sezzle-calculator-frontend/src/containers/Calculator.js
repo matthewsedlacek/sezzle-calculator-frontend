@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import CalculatorDisplay from "../components/calculator/CalculatorDisplay";
 import Keypad from "../components/calculator/Keypad";
-import { Card } from "react-bootstrap/Card";
+import Card from "react-bootstrap/Card";
 
 class Calculator extends Component {
   state = {
@@ -51,10 +51,16 @@ class Calculator extends Component {
   render() {
     return (
       <div>
-        <div>
-          <CalculatorDisplay result={this.state.result} />
-          <Keypad onClick={this.onClick} />
-        </div>
+        <Card style={{ width: "50%" }}>
+          <Card.Body>
+            <Card.Text>
+              <CalculatorDisplay result={this.state.result} />
+            </Card.Text>
+            <Card.Text>
+              <Keypad onClick={this.onClick} />
+            </Card.Text>
+          </Card.Body>
+        </Card>
       </div>
     );
   }
