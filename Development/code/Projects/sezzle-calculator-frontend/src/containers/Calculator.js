@@ -53,13 +53,11 @@ class Calculator extends Component {
     return ["Primary"].map((variant, idx) => (
       <Card style={{ width: "50%" }} bg={variant.toLowerCase()}>
         <Card.Body>
-          <SezzleLogo />
           <Card.Text>
-            <div class="card">
-              <div>
-                <CalculatorDisplay result={this.state.result} />
-              </div>
-            </div>
+            <SezzleLogo />
+          </Card.Text>
+          <Card.Text>
+            <CalculatorDisplay result={this.state.result} />
           </Card.Text>
           <Card.Text>
             <Keypad onClick={this.onClick} />

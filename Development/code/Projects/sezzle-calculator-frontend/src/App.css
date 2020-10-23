@@ -54,22 +54,14 @@
 
 .card {
   flex-grow: 1;
-  margin: 7px;
   display: flex;
   flex-direction: column;
-  border: thin solid gray;
-  background: #e0ffff;
-  overflow: hidden; /* NEW */
-}
-
-.card div {
-  border: thin solid gray;
+  overflow: hidden;
 }
 
 .card div:nth-child(1) {
-  white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden; /* NEW */
+  overflow: hidden;
 }
 
 .card div:nth-child(2) {
