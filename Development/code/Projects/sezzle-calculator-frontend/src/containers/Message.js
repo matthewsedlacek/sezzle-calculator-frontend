@@ -38,7 +38,7 @@ const Chat = () => {
   return (
     <div>
       <Grid container component={Paper} className={classes.chatSection}>
-        <Grid item xs={9}>
+        <Grid item xs={12}>
           <Typography variant="h5" className="header-message">
             Chat
           </Typography>
