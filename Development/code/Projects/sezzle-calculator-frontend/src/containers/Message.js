@@ -37,18 +37,11 @@ const Chat = () => {
 
   return (
     <div>
-      <Grid container>
-        <Grid item xs={12}>
-          <br></br>
+      <Grid container component={Paper} className={classes.chatSection}>
+        <Grid item xs={9}>
           <Typography variant="h5" className="header-message">
             Chat
           </Typography>
-        </Grid>
-      </Grid>
-      <Grid container component={Paper} className={classes.chatSection}>
-        <Grid item xs={3} className={classes.borderRight500}>
-          <Divider />
-          <Grid item xs={12} style={{ padding: "10px" }}></Grid>
           <List>
             <ListItem button key="userIcon">
               <ListItemIcon>
@@ -61,8 +54,6 @@ const Chat = () => {
               <ListItemText secondary="online" align="right"></ListItemText>
             </ListItem>
           </List>
-        </Grid>
-        <Grid item xs={9}>
           <List className={classes.messageArea}>
             <ListItem key="1">
               <Grid container>
