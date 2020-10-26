@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Calculator from "./containers/Calculator";
-import Message from "./containers/Message";
+import Chatbox from "./containers/Chatbox";
 import Grid from "@material-ui/core/Grid";
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
           <Calculator />
         </Grid>
         <Grid style={{ padding: 20 }} item xs={7}>
-          <Message />
+          <Chatbox />
         </Grid>
       </Grid>
     );
