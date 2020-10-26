@@ -51,7 +51,7 @@ class Calculator extends Component {
 
   render() {
     return ["Primary"].map((variant, idx) => (
-      <Card style={{ width: "50%" }} bg={variant.toLowerCase()}>
+      <Card bg={variant.toLowerCase()}>
         <Card.Body>
           <Card.Text>
             <SezzleLogo />
