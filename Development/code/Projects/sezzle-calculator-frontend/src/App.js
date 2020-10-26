@@ -8,10 +8,10 @@ class App extends Component {
   render() {
     return (
       <Grid container spacing={3}>
-        <Grid item xs={6}>
+        <Grid className="appMargin">
           <Calculator />
         </Grid>
-        <Grid item xs>
+        <Grid style={{ padding: 20 }} item xs={7}>
           <Message />
         </Grid>
       </Grid>

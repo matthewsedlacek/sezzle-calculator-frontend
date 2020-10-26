@@ -74,3 +74,12 @@ button {
   font-size: 30px;
   /* margin: 10px; */
 }
+
+.calculatorContainer {
+  margin: 10px;
+  width: 540px;
+}
+
+.appMargin {
+  margin: 10px;
+}

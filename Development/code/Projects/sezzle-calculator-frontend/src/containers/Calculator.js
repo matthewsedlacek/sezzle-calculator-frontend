@@ -51,7 +51,7 @@ class Calculator extends Component {
 
   render() {
     return ["Primary"].map((variant, idx) => (
-      <Card bg={variant.toLowerCase()}>
+      <Card className="calculatorContainer" bg={variant.toLowerCase()}>
         <Card.Body>
           <Card.Text>
             <SezzleLogo />
