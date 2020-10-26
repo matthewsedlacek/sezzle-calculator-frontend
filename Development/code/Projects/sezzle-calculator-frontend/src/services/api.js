@@ -17,7 +17,7 @@ const randomPetHeaders = () => {
 };
 
 const login = (data) => {
-  return fetch(`${API_ROOT}/login`, {
+  return fetch(`${API}/login`, {
     method: "POST",
     headers: headers(),
     body: JSON.stringify({ user: data }),
@@ -25,14 +25,14 @@ const login = (data) => {
 };
 
 const getCurrentUser = (data) => {
-  return fetch(`${API_ROOT}/profile`, {
+  return fetch(`${API}/profile`, {
     method: "GET",
     headers: headers(),
   }).then((res) => res.json());
 };
 
 const createUser = (data) => {
-  return fetch(`${API_ROOT}/users/`, {
+  return fetch(`${API}/users/`, {
     method: "POST",
     headers: headers(),
     body: JSON.stringify({
@@ -50,7 +50,7 @@ const getPet = () => {
 };
 
 const getMessages = () => {
-  return fetch(`${API}/messages/`, { headers: headers() }).then((res) =>
+  return fetch(`${API}/messages`, { headers: headers() }).then((res) =>
     res.json()
   );
 };
@@ -74,7 +74,7 @@ export const api = {
   newUser: {
     createUser,
   },
-  userData: {
+  messages: {
     getMessages,
     newMessage,
   },

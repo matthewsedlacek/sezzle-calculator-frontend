@@ -10,6 +10,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ChatHeader from "../components/chatbox/ChatHeader";
 import User from "../components/chatbox/User";
 import MessageCard from "../components/chatbox/messages/MessageCard";
+import MessageList from "../components/chatbox/messages/MessageList";
 
 const useStyles = makeStyles({
   table: {
@@ -40,7 +41,7 @@ const Chatbox = () => {
         <Grid item xs={12}>
           <ChatHeader />
           <User />
-          <MessageCard />
+          <MessageList />
         </Grid>
       </Grid>
     </div>

@@ -19,43 +19,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MessageCard = () => {
+const MessageCard = (props) => {
   const classes = useStyles();
 
   return (
-    <List className={classes.messageArea}>
-      <ListItem key="1">
-        <Grid container>
-          <Grid item xs={12}>
-            <ListItemText align="right">2 *4 = 8</ListItemText>
-            <ListItemText align="right" secondary="09:30"></ListItemText>
-          </Grid>
-          <Grid item xs={12}></Grid>
-        </Grid>
-      </ListItem>
-      <ListItem key="2">
-        <Grid container>
-          <Grid item xs={12}>
-            <ListItemText align="left" primary="5 + 5 = 10"></ListItemText>
-            <ListItemText align="left" secondary="09:31"></ListItemText>
-            <Divider />
-          </Grid>
-          <Grid item xs={12}>
-            <Divider />
-          </Grid>
-        </Grid>
-      </ListItem>
-      <ListItem key="3">
-        <Grid container>
-          <Grid item xs={12}>
-            <ListItemText align="right" primary="2 /2 = 1"></ListItemText>
-            <ListItemText align="right" secondary="10:30"></ListItemText>
-            <Divider />
-          </Grid>
-          <Grid item xs={12}></Grid>
-        </Grid>
-      </ListItem>
-    </List>
+    // <List className={classes.messageArea}>
+    <ListItem>
+      <Grid item xs={12}>
+        <ListItemText align="right" primary={props.messageText}></ListItemText>
+        <ListItemText align="right" secondary={props.timestamp}></ListItemText>
+      </Grid>
+    </ListItem>
+    // </List>
   );
 };
 

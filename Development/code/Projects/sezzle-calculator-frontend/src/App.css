@@ -83,3 +83,11 @@ button {
 .appMargin {
   margin: 10px;
 }
+
+.chatboxMessagesContainer {
+  /* bottom: 0,
+    position: "fixed", */
+
+  height: 70vh;
+  overflow: scroll;
+}
