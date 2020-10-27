@@ -1,5 +1,4 @@
 import React from "react";
-import makeStyles from "@material-ui/core/styles/makeStyles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Divider from "@material-ui/core/Divider";
@@ -8,29 +7,45 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 
-const useStyles = makeStyles((theme) => ({
-  container: {
-    bottom: 0,
-    position: "fixed",
-  },
-  messageArea: {
-    height: "70vh",
-    overflowY: "auto",
-  },
-}));
-
 const MessageCard = (props) => {
-  const classes = useStyles();
-
   return (
-    // <List className={classes.messageArea}>
     <ListItem>
       <Grid item xs={12}>
-        <ListItemText align="right" primary={props.messageText}></ListItemText>
-        <ListItemText align="right" secondary={props.timestamp}></ListItemText>
+        {props.id % 2 === 0 ? (
+          <>
+            <ListItemText
+              align="right"
+              primary={props.messageText}
+            ></ListItemText>
+            <ListItemText
+              align="right"
+              secondary={props.timestamp}
+            ></ListItemText>
+            <ListItemText
+              align="right"
+              secondary={props.username}
+            ></ListItemText>
+            <Divider />
+          </>
+        ) : (
+          <>
+            <ListItemText
+              align="left"
+              primary={props.messageText}
+            ></ListItemText>
+            <ListItemText
+              align="left"
+              secondary={props.timestamp}
+            ></ListItemText>
+            <ListItemText
+              align="left"
+              secondary={props.username}
+            ></ListItemText>
+            <Divider />
+          </>
+        )}
       </Grid>
     </ListItem>
-    // </List>
   );
 };
 

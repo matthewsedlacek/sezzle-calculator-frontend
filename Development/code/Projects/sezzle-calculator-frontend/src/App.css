@@ -85,9 +85,7 @@ button {
 }
 
 .chatboxMessagesContainer {
-  /* bottom: 0,
-    position: "fixed", */
-
+  margin: 10px;
   height: 70vh;
   overflow: scroll;
 }
