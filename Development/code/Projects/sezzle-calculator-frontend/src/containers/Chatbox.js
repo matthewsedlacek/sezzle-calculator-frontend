@@ -5,13 +5,13 @@ import ChatHeader from "../components/chatbox/ChatHeader";
 import User from "../components/chatbox/User";
 import MessageList from "../components/chatbox/messages/MessageList";
 
-const Chatbox = () => {
+const Chatbox = (props) => {
   return (
     <div>
       <Grid component={Paper}>
         <Grid item xs={12}>
           <ChatHeader />
-          <User />
+          <User username={props.username} userImage={props.userImage} />
           <MessageList />
         </Grid>
       </Grid>

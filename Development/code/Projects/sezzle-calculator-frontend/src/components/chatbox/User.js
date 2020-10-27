@@ -5,17 +5,14 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Avatar from "@material-ui/core/Avatar";
 
-const User = () => {
+const User = (props) => {
   return (
     <List>
       <ListItem button key="userIcon">
         <ListItemIcon>
-          <Avatar
-          //   alt="random user icon"
-          //   src=""
-          />
+          <Avatar alt="random user icon" src={props.userImage} />
         </ListItemIcon>
-        <ListItemText>Randomly Generated Username</ListItemText>
+        <ListItemText>{props.username}</ListItemText>
         <ListItemText secondary="online" align="right"></ListItemText>
       </ListItem>
     </List>

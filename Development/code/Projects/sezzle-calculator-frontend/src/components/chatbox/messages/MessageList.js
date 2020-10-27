@@ -1,11 +1,6 @@
 import React from "react";
 import MessageCard from "./MessageCard";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Alert from "react-bootstrap/Alert";
 import { api } from "../../../services/api.js";
-import makeStyles from "@material-ui/core/styles/makeStyles";
 import List from "@material-ui/core/List";
 
 class MessageList extends React.Component {
@@ -19,7 +14,6 @@ class MessageList extends React.Component {
 
   fetchMessages = () => {
     api.messages.getMessages().then((data) => {
-      console.log(data);
       this.setState({ messages: data });
     });
     // }
