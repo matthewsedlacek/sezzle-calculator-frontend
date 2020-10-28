@@ -25,7 +25,7 @@ class MessageList extends React.Component {
         <MessageCard
           key={soloMessage.id}
           id={soloMessage.id}
-          messageText={soloMessage.message_text}
+          messageText={soloMessage.text}
           username={soloMessage.username}
           timestamp={soloMessage.created_at}
         />

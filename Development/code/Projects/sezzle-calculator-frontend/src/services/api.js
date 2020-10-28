@@ -26,8 +26,9 @@ const newMessage = (message, currentUser) => {
     method: "POST",
     headers: headers(),
     body: JSON.stringify({
-      message_text: message,
+      text: message,
       username: currentUser,
+      conversation_id: 1,
     }),
   }).then((res) => res.json());
 };
