@@ -5,17 +5,28 @@ import Grid from "@material-ui/core/Grid";
 import ChatHeader from "../components/chatbox/ChatHeader";
 import User from "../components/chatbox/User";
 import MessageList from "../components/chatbox/MessageList";
+import Calculator from "../containers/Calculator";
 
 // New Chatbox??
 
-const MessagesArea = ({ conversation: { id, username, messages } }) => {
+const MessagesArea = (props) => {
+  const {
+    conversation: { id, messages },
+  } = props;
+
+  const { username, userImage } = props;
+
   return (
     <div>
-      <NewMessageForm conversation_id={id} username={username} />
+      <Calculator
+        conversation_id={id}
+        username={username}
+        userImage={userImage}
+      />
       <Grid component={Paper}>
         <Grid item xs={12}>
           <ChatHeader />
-          <User />
+          <User username={username} userImage={userImage} />
           <MessageList messages={messages} />
         </Grid>
       </Grid>
