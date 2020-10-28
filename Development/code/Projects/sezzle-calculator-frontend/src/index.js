@@ -8,9 +8,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { API_WS_ROOT } from "./constants";
 
 ReactDOM.render(
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>,
   <ActionCableProvider url={API_WS_ROOT}>
     <App />
   </ActionCableProvider>,
