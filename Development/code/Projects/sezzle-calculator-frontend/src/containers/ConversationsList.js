@@ -4,7 +4,6 @@ import { API_ROOT } from "../constants";
 import MessagesArea from "../components/MessagesArea";
 import Cable from "../components/Cable";
 import { api } from "../services/api.js";
-import Button from "react-bootstrap/Button";
 import Typography from "@material-ui/core/Typography";
 import Card from "react-bootstrap/Card";
 
@@ -77,16 +76,12 @@ class ConversationsList extends React.Component {
             handleReceivedMessage={this.handleReceivedMessage}
           />
         ) : null}
-        <Card
-          className="calculatorContainer"
-          // style={{ backgroundColor: "black" }}
-        >
+        <Card className="calculatorContainer">
           <Typography variant="h2">Conversations</Typography>
           <br></br>
           <Typography variant="h6">Click To Join</Typography>
           <ul>{mapConversations(conversations, this.handleClick)}</ul>
         </Card>
-        {/* <NewConversationForm /> */}
         {activeConversation ? (
           <MessagesArea
             conversation={findActiveConversation(

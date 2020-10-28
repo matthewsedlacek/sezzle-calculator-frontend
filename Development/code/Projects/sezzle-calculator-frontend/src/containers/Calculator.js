@@ -3,7 +3,6 @@ import CalculatorDisplay from "../components/calculator/CalculatorDisplay";
 import Keypad from "../components/calculator/Keypad";
 import SezzleLogo from "../components/calculator/SezzleLogo";
 import Card from "react-bootstrap/Card";
-import { API_ROOT, HEADERS } from "../constants";
 
 class Calculator extends Component {
   state = {
