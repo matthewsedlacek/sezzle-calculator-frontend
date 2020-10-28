@@ -18,6 +18,8 @@ An application that provides users the ability to practice buying and selling S&
 4. Run `npm start` in your terminal
 5. Enjoy Sezzle Calculator
 
+Note: If errors with ActionCable Provider run `npm install --save react-actioncable-provider`
+
 ## Features
 
 Users can:
