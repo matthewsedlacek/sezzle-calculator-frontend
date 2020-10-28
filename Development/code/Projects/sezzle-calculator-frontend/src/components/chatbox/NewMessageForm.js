@@ -1,11 +1,5 @@
-// src/components/NewMessageForm.js
-
 import React from "react";
-import { API_ROOT, HEADERS } from "../constants";
-import CalculatorDisplay from "../components/calculator/CalculatorDisplay";
-import Keypad from "../components/calculator/Keypad";
-import SezzleLogo from "../components/calculator/SezzleLogo";
-import Card from "react-bootstrap/Card";
+import { API_ROOT, HEADERS } from "../../constants";
 
 class NewMessageForm extends React.Component {
   state = {
@@ -37,15 +31,10 @@ class NewMessageForm extends React.Component {
 
   render = () => {
     return (
-      <div className="newMessageForm">
+      <div>
         <form onSubmit={this.handleSubmit}>
-          <label>New Message:</label>
+          <label className="newMessageForm">Submit Calculation to Chat:</label>
           <br />
-          {/* <input
-            type="text"
-            value={this.state.text}
-            onChange={this.handleChange}
-          /> */}
           <input type="submit" />
         </form>
       </div>

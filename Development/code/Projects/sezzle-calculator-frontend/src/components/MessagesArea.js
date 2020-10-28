@@ -1,5 +1,5 @@
 import React from "react";
-import NewMessageForm from "./NewMessageForm";
+import NewMessageForm from "./chatbox/NewMessageForm";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import ChatHeader from "../components/chatbox/ChatHeader";
@@ -20,18 +20,9 @@ const MessagesArea = (props) => {
     <div>
       <Grid container spacing={3}>
         <Grid className="appMargin">
-          {/* <Calculator username={this.state.username} /> */}
-          <Calculator
-            conversation_id={id}
-            username={username}
-            // userImage={userImage}
-          />
+          <Calculator conversation_id={id} username={username} />
         </Grid>
         <Grid style={{ padding: 20 }} item xs={7}>
-          {/* <Chatbox
-            username={this.state.username}
-            userImage={this.state.userImage}
-          /> */}
           <Grid component={Paper}>
             <Grid item xs={12}>
               <ChatHeader />

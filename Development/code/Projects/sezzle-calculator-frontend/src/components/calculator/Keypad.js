@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
-import NewMessageForm from "../NewMessageForm";
+import NewMessageForm from "../chatbox/NewMessageForm";
 
 const Keypad = (props) => {
   return (

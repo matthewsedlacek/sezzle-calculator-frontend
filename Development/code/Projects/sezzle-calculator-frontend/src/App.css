@@ -52,6 +52,10 @@
   background: #e0e0ff;
 }
 
+.newMessageForm {
+  color: white;
+}
+
 .card {
   flex-grow: 1;
   display: flex;

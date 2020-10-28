@@ -1,10 +1,12 @@
 import React from "react";
 import { ActionCable } from "react-actioncable-provider";
 import { API_ROOT } from "../constants";
-import NewConversationForm from "./NewConversationForm";
 import MessagesArea from "./MessagesArea";
 import Cable from "./Cable";
 import { api } from "../services/api.js";
+import Button from "react-bootstrap/Button";
+import Typography from "@material-ui/core/Typography";
+import Card from "react-bootstrap/Card";
 
 class ConversationsList extends React.Component {
   state = {
@@ -64,7 +66,7 @@ class ConversationsList extends React.Component {
   render = () => {
     const { conversations, activeConversation } = this.state;
     return (
-      <div className="conversationsList">
+      <div>
         <ActionCable
           channel={{ channel: "ConversationsChannel" }}
           onReceived={this.handleReceivedConversation}
@@ -75,8 +77,15 @@ class ConversationsList extends React.Component {
             handleReceivedMessage={this.handleReceivedMessage}
           />
         ) : null}
-        <h2>Conversations</h2>
-        <ul>{mapConversations(conversations, this.handleClick)}</ul>
+        <Card
+          className="calculatorContainer"
+          // style={{ backgroundColor: "black" }}
+        >
+          <Typography variant="h2">Conversations</Typography>
+          <br></br>
+          <Typography variant="h6">Click To Join</Typography>
+          <ul>{mapConversations(conversations, this.handleClick)}</ul>
+        </Card>
         {/* <NewConversationForm /> */}
         {activeConversation ? (
           <MessagesArea
