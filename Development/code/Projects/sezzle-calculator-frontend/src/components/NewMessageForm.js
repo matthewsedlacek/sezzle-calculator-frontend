@@ -9,12 +9,15 @@ import Card from "react-bootstrap/Card";
 
 class NewMessageForm extends React.Component {
   state = {
-    text: "",
     conversation_id: this.props.conversation_id,
+    text: this.props.result,
+    username: this.props.username,
   };
 
   componentWillReceiveProps = (nextProps) => {
     this.setState({ conversation_id: nextProps.conversation_id });
+    this.setState({ text: nextProps.result });
+    this.setState({ username: nextProps.username });
   };
 
   handleChange = (e) => {
@@ -38,11 +41,11 @@ class NewMessageForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>New Message:</label>
           <br />
-          <input
+          {/* <input
             type="text"
             value={this.state.text}
             onChange={this.handleChange}
-          />
+          /> */}
           <input type="submit" />
         </form>
       </div>

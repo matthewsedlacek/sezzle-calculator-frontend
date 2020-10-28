@@ -10,6 +10,7 @@ class Calculator extends Component {
   state = {
     result: "",
     errorMessage: 0,
+    resultPost: "",
   };
 
   onClick = (button) => {
@@ -32,10 +33,12 @@ class Calculator extends Component {
         {
           result:
             this.state.result + " = " + (eval(this.state.result) || "") + "",
-        },
-        () => {
-          this.handleSubmit();
+          resultPost:
+            this.state.result + " = " + (eval(this.state.result) || "") + "",
         }
+        // () => {
+        //   this.handleSubmit();
+        // }
       );
     } catch (e) {
       this.setState({
@@ -44,19 +47,19 @@ class Calculator extends Component {
     }
   };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    fetch(`${API_ROOT}/messages`, {
-      method: "POST",
-      headers: HEADERS,
-      body: JSON.stringify({
-        text: this.state.result,
-        username: this.props.username,
-        conversation_id: 1,
-      }),
-    });
-    this.setState({ text: "" });
-  };
+  // handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   fetch(`${API_ROOT}/messages`, {
+  //     method: "POST",
+  //     headers: HEADERS,
+  //     body: JSON.stringify({
+  //       text: this.state.result,
+  //       username: this.props.username,
+  //       conversation_id: 1,
+  //     }),
+  //   });
+  //   this.setState({ text: "" });
+  // };
 
   // handleSubmit = () => {
   // // console.log(e);
@@ -91,6 +94,7 @@ class Calculator extends Component {
   reset = () => {
     this.setState({
       result: "",
+      resultPost: "",
     });
   };
 
@@ -111,7 +115,13 @@ class Calculator extends Component {
             <CalculatorDisplay result={this.state.result} />
           </Card.Text>
           <Card.Text>
-            <Keypad onClick={this.onClick} onSubmit={this.handleSubmit} />
+            <Keypad
+              onClick={this.onClick}
+              resultPost={this.state.resultPost}
+              conversation_id={this.props.conversation_id}
+              username={this.props.username}
+              // userImage={this.props.userImage}
+            />
           </Card.Text>
         </Card.Body>
       </Card>

@@ -21,7 +21,7 @@ const MessagesArea = (props) => {
       <Calculator
         conversation_id={id}
         username={username}
-        userImage={userImage}
+        // userImage={userImage}
       />
       <Grid component={Paper}>
         <Grid item xs={12}>

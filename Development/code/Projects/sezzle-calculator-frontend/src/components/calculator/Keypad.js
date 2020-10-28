@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
+import NewMessageForm from "../NewMessageForm";
 
 const Keypad = (props) => {
   return (
@@ -173,6 +174,11 @@ const Keypad = (props) => {
         ÷
       </Button>
       <br />
+      <NewMessageForm
+        result={props.resultPost}
+        conversation_id={props.conversation_id}
+        username={props.username}
+      />
     </div>
   );
 };
