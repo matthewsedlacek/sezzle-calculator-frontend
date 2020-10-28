@@ -3,7 +3,6 @@ import CalculatorDisplay from "../components/calculator/CalculatorDisplay";
 import Keypad from "../components/calculator/Keypad";
 import SezzleLogo from "../components/calculator/SezzleLogo";
 import Card from "react-bootstrap/Card";
-// import { api } from "./../services/api.js";
 import { API_ROOT, HEADERS } from "../constants";
 
 class Calculator extends Component {
@@ -29,67 +28,18 @@ class Calculator extends Component {
 
   calculate = () => {
     try {
-      this.setState(
-        {
-          result:
-            this.state.result + " = " + (eval(this.state.result) || "") + "",
-          resultPost:
-            this.state.result + " = " + (eval(this.state.result) || "") + "",
-        }
-        // () => {
-        //   this.handleSubmit();
-        // }
-      );
+      this.setState({
+        result:
+          this.state.result + " = " + (eval(this.state.result) || "") + "",
+        resultPost:
+          this.state.result + " = " + (eval(this.state.result) || "") + "",
+      });
     } catch (e) {
       this.setState({
         result: "error",
       });
     }
   };
-
-  // handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   fetch(`${API_ROOT}/messages`, {
-  //     method: "POST",
-  //     headers: HEADERS,
-  //     body: JSON.stringify({
-  //       text: this.state.result,
-  //       username: this.props.username,
-  //       conversation_id: 1,
-  //     }),
-  //   });
-  //   this.setState({ text: "" });
-  // };
-
-  // handleSubmit = () => {
-  // // console.log(e);
-  // // e.preventDefault();
-  // api.messages
-  //   .newMessage(this.state.result, this.props.username)
-  //   .then((res) => {
-  //     if (res.id === null) {
-  //       this.setState({
-  //         result: "Must be < 30 characters",
-  //       });
-  //     }
-  //   });
-  // //   this.fetchMessages();
-  // // } else {
-  // //   this.fetchMessages();
-  // // }
-  // // });
-  // // use reset method?
-  // // this.setState({
-  // //   result: "",
-  // //   errorMessage: 0,
-  // // });
-  // };
-
-  // fetchMessages = () => {
-  //   api.messages.getMessages().then((data) => {
-  //     this.setState({ messages: data });
-  //   });
-  // };
 
   reset = () => {
     this.setState({
@@ -120,7 +70,6 @@ class Calculator extends Component {
               resultPost={this.state.resultPost}
               conversation_id={this.props.conversation_id}
               username={this.props.username}
-              // userImage={this.props.userImage}
             />
           </Card.Text>
         </Card.Body>

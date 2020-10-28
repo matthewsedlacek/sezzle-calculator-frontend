@@ -1,8 +1,8 @@
 import React from "react";
 import { ActionCable } from "react-actioncable-provider";
 import { API_ROOT } from "../constants";
-import MessagesArea from "./MessagesArea";
-import Cable from "./Cable";
+import MessagesArea from "../components/MessagesArea";
+import Cable from "../components/Cable";
 import { api } from "../services/api.js";
 import Button from "react-bootstrap/Button";
 import Typography from "@material-ui/core/Typography";
