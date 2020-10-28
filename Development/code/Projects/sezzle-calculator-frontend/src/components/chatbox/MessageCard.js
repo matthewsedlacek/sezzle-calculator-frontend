@@ -11,18 +11,18 @@ const MessageCard = (props) => {
   return (
     <ListItem>
       <Grid item xs={12}>
-        {props.id % 2 === 0 ? (
+        {props.currentUser === props.username ? (
           <>
             <ListItemText
-              align="right"
+              align="left"
               primary={props.messageText}
             ></ListItemText>
             <ListItemText
-              align="right"
+              align="left"
               secondary={props.timestamp}
             ></ListItemText>
             <ListItemText
-              align="right"
+              align="left"
               secondary={props.username}
             ></ListItemText>
             <Divider />
@@ -30,15 +30,15 @@ const MessageCard = (props) => {
         ) : (
           <>
             <ListItemText
-              align="left"
+              align="right"
               primary={props.messageText}
             ></ListItemText>
             <ListItemText
-              align="left"
+              align="right"
               secondary={props.timestamp}
             ></ListItemText>
             <ListItemText
-              align="left"
+              align="right"
               secondary={props.username}
             ></ListItemText>
             <Divider />

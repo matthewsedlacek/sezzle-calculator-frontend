@@ -11,7 +11,7 @@ const MessageCard = (props) => {
   return (
     <ListItem>
       <Grid item xs={12}>
-        {props.id % 2 === 0 ? (
+        {props.currentUser === props.username ? (
           <>
             <ListItemText
               align="right"

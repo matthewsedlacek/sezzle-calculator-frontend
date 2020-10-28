@@ -18,20 +18,30 @@ const MessagesArea = (props) => {
 
   return (
     <div>
-      <Calculator
-        conversation_id={id}
-        username={username}
-        // userImage={userImage}
-      />
-      <Grid component={Paper}>
-        <Grid item xs={12}>
-          <ChatHeader />
-          <User username={username} userImage={userImage} />
-          <MessageList messages={messages} />
+      <Grid container spacing={3}>
+        <Grid className="appMargin">
+          {/* <Calculator username={this.state.username} /> */}
+          <Calculator
+            conversation_id={id}
+            username={username}
+            // userImage={userImage}
+          />
+        </Grid>
+        <Grid style={{ padding: 20 }} item xs={7}>
+          {/* <Chatbox
+            username={this.state.username}
+            userImage={this.state.userImage}
+          /> */}
+          <Grid component={Paper}>
+            <Grid item xs={12}>
+              <ChatHeader />
+              <User username={username} userImage={userImage} />
+              <MessageList messages={messages} currentUser={username} />
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
-      {/* <h2>{title}</h2>
-      <ul>{orderedMessages(messages)}</ul> */}
+      ;
     </div>
   );
 };

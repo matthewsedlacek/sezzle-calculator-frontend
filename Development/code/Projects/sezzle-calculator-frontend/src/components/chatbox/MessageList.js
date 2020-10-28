@@ -13,6 +13,7 @@ const MessageList = (props) => {
           messageText={soloMessage.text}
           username={soloMessage.username}
           timestamp={soloMessage.created_at}
+          currentUser={props.currentUser}
         />
       );
     });
