@@ -26,7 +26,7 @@ Users can:
 
 - Join a Conversation by available chats from a list
 
-![Login and Signup Page](README_assets/Login&Signup.gif)
+![Conversations](README_assets/Conversations.gif)
 
 **Calculator**
 
@@ -36,7 +36,7 @@ Users can:
 - Visit Sezzle's company page
 - Submit equations to the chat
 
-![Profile Page](README_assets/ProfilePage.gif)
+![Calculator](README_assets/Calculator.gif)
 
 **Chat**
 
@@ -44,7 +44,7 @@ Users can:
 - Text orientation shown based on if the message is associated with the username in the session
 - Scroll to see what other users have posted and when
 
-![Portfolio Page](README_assets/PortfolioPage.gif)
+![Chat](README_assets/Chat.gif)
 
 ## Technology Used
 
