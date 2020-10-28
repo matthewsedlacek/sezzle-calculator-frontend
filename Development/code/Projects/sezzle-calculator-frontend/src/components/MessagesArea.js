@@ -7,11 +7,9 @@ import User from "../components/chatbox/User";
 import MessageList from "../components/chatbox/MessageList";
 import Calculator from "../containers/Calculator";
 
-// New Chatbox??
-
 const MessagesArea = (props) => {
   const {
-    conversation: { id, messages },
+    conversation: { id, title, messages },
   } = props;
 
   const { username, userImage } = props;
@@ -25,7 +23,7 @@ const MessagesArea = (props) => {
         <Grid style={{ padding: 20 }} item xs={7}>
           <Grid component={Paper}>
             <Grid item xs={12}>
-              <ChatHeader />
+              <ChatHeader title={title} />
               <User username={username} userImage={userImage} />
               <MessageList messages={messages} currentUser={username} />
             </Grid>
@@ -38,14 +36,3 @@ const MessagesArea = (props) => {
 };
 
 export default MessagesArea;
-
-// helpers
-
-// const orderedMessages = (messages) => {
-//   const sortedMessages = messages.sort(
-//     (a, b) => new Date(a.created_at) - new Date(b.created_at)
-//   );
-//   return sortedMessages.map((message) => {
-//     return <li key={message.id}>{message.text}</li>;
-//   });
-// };

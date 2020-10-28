@@ -1,8 +1,8 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 
-const ChatHeader = () => {
-  return <Typography variant="h5">Chat</Typography>;
+const ChatHeader = (props) => {
+  return <Typography variant="h5">{props.title}</Typography>;
 };
 
 export default ChatHeader;
